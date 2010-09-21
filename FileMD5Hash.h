@@ -1,4 +1,4 @@
- /*
+/*
  *  FileMD5Hash.h
  *  Compute MD5 hash of large file efficiently on iOS and Mac OS X
  *  http://www.joel.lopes-da-silva.com/2010/09/07/compute-md5-or-sha-hash-of-large-file-efficiently-on-ios-and-mac-os-x/
