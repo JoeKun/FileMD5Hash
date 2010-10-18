@@ -1,0 +1,14 @@
+# FileMD5Hash.git/.gitignore
+
+# Xcode noise
+/build
+*.pbxuser
+*.mode*
+*.perspective*
+
+# Other version control systems noise
+.svn
+
+# Mac OS X noise
+.DS_Store
+

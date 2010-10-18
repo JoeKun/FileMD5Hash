@@ -1,0 +1,414 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		5DC8CD9C126AF59300CE5F6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8CD9B126AF59300CE5F6B /* MainMenu.xib */; };
+		5DC8CD9E126AF5F300CE5F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8CD9D126AF5F300CE5F6B /* main.m */; };
+		5DC8CDC2126AF93100CE5F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8CDC1126AF93100CE5F6B /* AppDelegate.m */; };
+		5DC8CDF7126AFFB700CE5F6B /* FileMD5Hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileMD5Hash.c */; };
+		5DC8CEB4126B01FC00CE5F6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC8CEB3126B01FC00CE5F6B /* Cocoa.framework */; };
+		5DE285F3126ACE760092F897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE285DB126ACE110092F897 /* main.m */; };
+		5DE285F4126ACE7B0092F897 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE285D6126ACE110092F897 /* MainWindow_iPad.xib */; };
+		5DE285F5126ACE7D0092F897 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE285DA126ACE110092F897 /* MainWindow_iPhone.xib */; };
+		5DE28616126AD5230092F897 /* FileMD5Hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileMD5Hash.c */; };
+		5DF37931126AE8A200DC3A70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF37930126AE85C00DC3A70 /* AppDelegate.m */; };
+		5DF37A0B126AEB3300DC3A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF37A0A126AEB3300DC3A70 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMD5Hash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5DC8CD7C126AF42700CE5F6B /* FileMD5Hash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMD5Hash.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DC8CD84126AF49500CE5F6B /* FileMD5Hash-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FileMD5Hash-Info.plist"; sourceTree = "<group>"; };
+		5DC8CD9B126AF59300CE5F6B /* MainMenu.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		5DC8CD9D126AF5F300CE5F6B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DC8CDC0126AF93100CE5F6B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DC8CDC1126AF93100CE5F6B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DC8CEB3126B01FC00CE5F6B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5DE285D1126ACE110092F897 /* FileMD5Hash-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "FileMD5Hash-Info.plist"; sourceTree = "<group>"; };
+		5DE285D6126ACE110092F897 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
+		5DE285DA126ACE110092F897 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
+		5DE285DB126ACE110092F897 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5DE28614126AD4EB0092F897 /* FileMD5Hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileMD5Hash.c; sourceTree = "<group>"; };
+		5DE28615126AD4EB0092F897 /* FileMD5Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5Hash.h; sourceTree = "<group>"; };
+		5DF378DA126AD84000DC3A70 /* FileMD5Hash_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5Hash_Prefix.pch; sourceTree = "<group>"; };
+		5DF3792F126AE85C00DC3A70 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5DF37930126AE85C00DC3A70 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5DF37A0A126AEB3300DC3A70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
+				5DF37A0B126AEB3300DC3A70 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC8CD7A126AF42700CE5F6B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC8CEB4126B01FC00CE5F6B /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */,
+				5DC8CD7C126AF42700CE5F6B /* FileMD5Hash.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				5DE285D0126ACE110092F897 /* iOS */,
+				5DC8CD83126AF49500CE5F6B /* Mac */,
+				5DE28613126AD4EB0092F897 /* Common */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5DC8CE0C126B01B600CE5F6B /* iOS */,
+				5DC8CEB2126B01C200CE5F6B /* Mac */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DC8CD83126AF49500CE5F6B /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				5DC8CDC0126AF93100CE5F6B /* AppDelegate.h */,
+				5DC8CDC1126AF93100CE5F6B /* AppDelegate.m */,
+				5DC8CD9B126AF59300CE5F6B /* MainMenu.xib */,
+				5DC8CD9D126AF5F300CE5F6B /* main.m */,
+				5DC8CD84126AF49500CE5F6B /* FileMD5Hash-Info.plist */,
+			);
+			path = Mac;
+			sourceTree = "<group>";
+		};
+		5DC8CE0C126B01B600CE5F6B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				5DF37A0A126AEB3300DC3A70 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5DC8CEB2126B01C200CE5F6B /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				5DC8CEB3126B01FC00CE5F6B /* Cocoa.framework */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		5DE285D0126ACE110092F897 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				5DF3792F126AE85C00DC3A70 /* AppDelegate.h */,
+				5DF37930126AE85C00DC3A70 /* AppDelegate.m */,
+				5DE285D3126ACE110092F897 /* iPad */,
+				5DE285D7126ACE110092F897 /* iPhone */,
+				5DE285DB126ACE110092F897 /* main.m */,
+				5DE285D1126ACE110092F897 /* FileMD5Hash-Info.plist */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		5DE285D3126ACE110092F897 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				5DE285D6126ACE110092F897 /* MainWindow_iPad.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		5DE285D7126ACE110092F897 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				5DE285DA126ACE110092F897 /* MainWindow_iPhone.xib */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		5DE28613126AD4EB0092F897 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5DF378DA126AD84000DC3A70 /* FileMD5Hash_Prefix.pch */,
+				5DE28615126AD4EB0092F897 /* FileMD5Hash.h */,
+				5DE28614126AD4EB0092F897 /* FileMD5Hash.c */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildPhases = (
+				1D60588D0D05DD3D006BFB54 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = iOS;
+			productName = FileMD5Hash;
+			productReference = 1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DC8CD7B126AF42700CE5F6B /* Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Mac" */;
+			buildPhases = (
+				5DC8CD78126AF42700CE5F6B /* Resources */,
+				5DC8CD79126AF42700CE5F6B /* Sources */,
+				5DC8CD7A126AF42700CE5F6B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mac;
+			productName = FileMD5Hash;
+			productReference = 5DC8CD7C126AF42700CE5F6B /* FileMD5Hash.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FileMD5Hash" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* iOS */,
+				5DC8CD7B126AF42700CE5F6B /* Mac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D60588D0D05DD3D006BFB54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE285F5126ACE7D0092F897 /* MainWindow_iPhone.xib in Resources */,
+				5DE285F4126ACE7B0092F897 /* MainWindow_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC8CD78126AF42700CE5F6B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC8CD9C126AF59300CE5F6B /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DF37931126AE8A200DC3A70 /* AppDelegate.m in Sources */,
+				5DE28616126AD5230092F897 /* FileMD5Hash.c in Sources */,
+				5DE285F3126ACE760092F897 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DC8CD79126AF42700CE5F6B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DC8CDC2126AF93100CE5F6B /* AppDelegate.m in Sources */,
+				5DC8CDF7126AFFB700CE5F6B /* FileMD5Hash.c in Sources */,
+				5DC8CD9E126AF5F300CE5F6B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
+				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
+				PRODUCT_NAME = FileMD5Hash;
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
+				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
+				PRODUCT_NAME = FileMD5Hash;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5DC8CD7F126AF42800CE5F6B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
+				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FileMD5Hash;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		5DC8CD80126AF42800CE5F6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
+				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
+				INSTALL_PATH = "$(HOME)/Applications";
+				OTHER_LDFLAGS = (
+					"-framework",
+					Foundation,
+					"-framework",
+					AppKit,
+				);
+				PREBINDING = NO;
+				PRODUCT_NAME = FileMD5Hash;
+				SDKROOT = macosx10.6;
+				ZERO_LINK = NO;
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DC8CD7F126AF42800CE5F6B /* Debug */,
+				5DC8CD80126AF42800CE5F6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FileMD5Hash" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
