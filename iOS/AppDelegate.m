@@ -41,6 +41,7 @@
 
 - (void)dealloc {
     [window release];
+    [label release];
     [super dealloc];
 }
 
