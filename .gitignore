@@ -2,6 +2,8 @@
 
 # Xcode noise
 /build
+project.xcworkspace
+xcuserdata
 *.pbxuser
 *.mode*
 *.perspective*
