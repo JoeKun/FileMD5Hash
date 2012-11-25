@@ -118,3 +118,7 @@ done:
     }
     return result;
 }
+
+FILEMD5HASH_EXTERN CFStringRef FileMD5HashCreateWithJustPath(CFStringRef filePath) {
+	return FileMD5HashCreateWithPath(filePath, FileHashDefaultChunkSizeForReadingData);
+}
