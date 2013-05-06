@@ -40,6 +40,9 @@
 // Function definition
 //---------------------------------------------------------
 
+
+void closeAndRelease(CFReadStreamRef readStream, CFURLRef fileURL);
+
 CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath,
                                       size_t chunkSizeForReadingData) {
     
@@ -53,14 +56,23 @@ CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath,
                                   (CFStringRef)filePath,
                                   kCFURLPOSIXPathStyle,
                                   (Boolean)false);
-    if (!fileURL) goto done;
+    if (!fileURL) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
     
     // Create and open the read stream
     readStream = CFReadStreamCreateWithFile(kCFAllocatorDefault,
                                             (CFURLRef)fileURL);
-    if (!readStream) goto done;
+    if (!readStream) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
     bool didSucceed = (bool)CFReadStreamOpen(readStream);
-    if (!didSucceed) goto done;
+    if (!didSucceed){
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
     
     // Initialize the hash object
     CC_MD5_CTX hashObject;
@@ -96,7 +108,10 @@ CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath,
     CC_MD5_Final(digest, &hashObject);
     
     // Abort if the read operation failed
-    if (!didSucceed) goto done;
+    if (!didSucceed) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
     
     // Compute the string result
     char hash[2 * sizeof(digest) + 1];
@@ -106,9 +121,98 @@ CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath,
     result = CFStringCreateWithCString(kCFAllocatorDefault,
                                        (const char *)hash,
                                        kCFStringEncodingUTF8);
+
+    closeAndRelease(readStream, fileURL);
+    return result;
+}
+
+
+
+CFStringRef FileSHA512HashCreateWithPath(CFStringRef filePath,
+                                      size_t chunkSizeForReadingData) {
     
-done:
+    // Declare needed variables
+    CFStringRef result = NULL;
+    CFReadStreamRef readStream = NULL;
     
+    // Get the file URL
+    CFURLRef fileURL =
+    CFURLCreateWithFileSystemPath(kCFAllocatorDefault,
+                                  (CFStringRef)filePath,
+                                  kCFURLPOSIXPathStyle,
+                                  (Boolean)false);
+    if (!fileURL) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
+    
+    // Create and open the read stream
+    readStream = CFReadStreamCreateWithFile(kCFAllocatorDefault,
+                                            (CFURLRef)fileURL);
+    if (!readStream) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
+    
+    bool didSucceed = (bool)CFReadStreamOpen(readStream);
+    if (!didSucceed) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
+    
+    // Initialize the hash object
+    CC_SHA512_CTX hashObject;
+    CC_SHA512_Init(&hashObject);
+    
+    // Make sure chunkSizeForReadingData is valid
+    if (!chunkSizeForReadingData) {
+        chunkSizeForReadingData = FileHashDefaultChunkSizeForReadingData;
+    }
+    
+    // Feed the data to the hash object
+    bool hasMoreData = true;
+    while (hasMoreData) {
+        uint8_t buffer[chunkSizeForReadingData];
+        CFIndex readBytesCount = CFReadStreamRead(readStream,
+                                                  (UInt8 *)buffer,
+                                                  (CFIndex)sizeof(buffer));
+        if (readBytesCount == -1) break;
+        if (readBytesCount == 0) {
+            hasMoreData = false;
+            continue;
+        }
+        CC_SHA512_Update(&hashObject,
+                         (const void *)buffer,
+                         (CC_LONG)readBytesCount);
+    }
+    
+    // Check if the read operation succeeded
+    didSucceed = !hasMoreData;
+    
+    // Compute the hash digest
+    unsigned char digest[CC_SHA512_DIGEST_LENGTH];
+    CC_SHA512_Final(digest, &hashObject);
+    
+    // Abort if the read operation failed
+    if (!didSucceed) {
+        closeAndRelease(readStream, fileURL);
+        return result;
+    }
+    
+    // Compute the string result
+    char hash[2 * sizeof(digest) + 1];
+    for (size_t i = 0; i < sizeof(digest); ++i) {
+        snprintf(hash + (2 * i), 3, "%02x", (int)(digest[i]));
+    }
+    result = CFStringCreateWithCString(kCFAllocatorDefault,
+                                       (const char *)hash,
+                                       kCFStringEncodingUTF8);
+    closeAndRelease(readStream, fileURL);
+    return result;
+}
+
+
+void closeAndRelease(CFReadStreamRef readStream, CFURLRef fileURL) {
     if (readStream) {
         CFReadStreamClose(readStream);
         CFRelease(readStream);
@@ -116,5 +220,7 @@ done:
     if (fileURL) {
         CFRelease(fileURL);
     }
-    return result;
 }
+
+
+

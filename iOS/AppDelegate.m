@@ -104,8 +104,27 @@
 #pragma mark -
 #pragma mark Actions
 
+- (IBAction)computeSHA512HashOfBinary:(id)sender {
+    NSString *executablePath = [[NSBundle mainBundle] executablePath];
+    
+    executablePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    executablePath = [executablePath stringByAppendingPathComponent:@"STB_ZIP_ARCHIVE_0011_1.zip"];
+    
+    CFStringRef executableFileMD5Hash =
+    FileSHA512HashCreateWithPath((CFStringRef)executablePath,
+                              FileHashDefaultChunkSizeForReadingData);
+    if (executableFileMD5Hash) {
+        [[self label] setText:((NSString *)executableFileMD5Hash)];
+        CFRelease(executableFileMD5Hash);
+    }
+}
+
 - (IBAction)computeMD5HashOfBinary:(id)sender {
     NSString *executablePath = [[NSBundle mainBundle] executablePath];
+    
+    executablePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    executablePath = [executablePath stringByAppendingPathComponent:@"STB_ZIP_ARCHIVE_0011_1.zip"];
+    
     CFStringRef executableFileMD5Hash = 
         FileMD5HashCreateWithPath((CFStringRef)executablePath, 
                                   FileHashDefaultChunkSizeForReadingData);
