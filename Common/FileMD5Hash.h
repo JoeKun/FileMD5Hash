@@ -44,5 +44,7 @@
 FILEMD5HASH_EXTERN CFStringRef FileMD5HashCreateWithPath(CFStringRef filePath, 
                                                          size_t chunkSizeForReadingData);
 
+FILEMD5HASH_EXTERN CFStringRef FileSHA512HashCreateWithPath(CFStringRef filePath,
+                                                            size_t chunkSizeForReadingData);
 
 #endif

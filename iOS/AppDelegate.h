@@ -46,6 +46,7 @@
 #pragma mark -
 #pragma mark Actions
 
+- (IBAction)computeSHA512HashOfBinary:(id)sender;
 - (IBAction)computeMD5HashOfBinary:(id)sender;
 
 

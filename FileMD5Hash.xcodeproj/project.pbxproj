@@ -279,6 +279,7 @@
 				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
 				PRODUCT_NAME = FileMD5Hash;
+				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
@@ -291,6 +292,7 @@
 				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
 				PRODUCT_NAME = FileMD5Hash;
+				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
