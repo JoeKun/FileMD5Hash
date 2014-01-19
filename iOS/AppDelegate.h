@@ -18,23 +18,13 @@
  *
  */
 
-//---------------------------------------------------------
-// Imports
-//---------------------------------------------------------
-
-// UIKit
 #import <UIKit/UIKit.h>
 
-
-//---------------------------------------------------------
-// Interface declaration
-//---------------------------------------------------------
 
 @interface AppDelegate : NSObject <UIApplicationDelegate> {
     UIWindow *window;
     UILabel *label;
 }
-
 
 #pragma mark -
 #pragma mark Properties
@@ -47,6 +37,5 @@
 #pragma mark Actions
 
 - (IBAction)computeMD5HashOfBinary:(id)sender;
-
 
 @end
