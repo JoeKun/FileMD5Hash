@@ -11,12 +11,12 @@
 		5DC8CD9C126AF59300CE5F6B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8CD9B126AF59300CE5F6B /* MainMenu.xib */; };
 		5DC8CD9E126AF5F300CE5F6B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8CD9D126AF5F300CE5F6B /* main.m */; };
 		5DC8CDC2126AF93100CE5F6B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DC8CDC1126AF93100CE5F6B /* AppDelegate.m */; };
-		5DC8CDF7126AFFB700CE5F6B /* FileMD5Hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileMD5Hash.c */; };
+		5DC8CDF7126AFFB700CE5F6B /* FileHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileHash.m */; };
 		5DC8CEB4126B01FC00CE5F6B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DC8CEB3126B01FC00CE5F6B /* Cocoa.framework */; };
 		5DE285F3126ACE760092F897 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE285DB126ACE110092F897 /* main.m */; };
 		5DE285F4126ACE7B0092F897 /* MainWindow_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE285D6126ACE110092F897 /* MainWindow_iPad.xib */; };
 		5DE285F5126ACE7D0092F897 /* MainWindow_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DE285DA126ACE110092F897 /* MainWindow_iPhone.xib */; };
-		5DE28616126AD5230092F897 /* FileMD5Hash.c in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileMD5Hash.c */; };
+		5DE28616126AD5230092F897 /* FileHash.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DE28614126AD4EB0092F897 /* FileHash.m */; };
 		5DF37931126AE8A200DC3A70 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DF37930126AE85C00DC3A70 /* AppDelegate.m */; };
 		5DF37A0B126AEB3300DC3A70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DF37A0A126AEB3300DC3A70 /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -35,9 +35,8 @@
 		5DE285D6126ACE110092F897 /* MainWindow_iPad.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPad.xib; sourceTree = "<group>"; };
 		5DE285DA126ACE110092F897 /* MainWindow_iPhone.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainWindow_iPhone.xib; sourceTree = "<group>"; };
 		5DE285DB126ACE110092F897 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5DE28614126AD4EB0092F897 /* FileMD5Hash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = FileMD5Hash.c; sourceTree = "<group>"; };
-		5DE28615126AD4EB0092F897 /* FileMD5Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5Hash.h; sourceTree = "<group>"; };
-		5DF378DA126AD84000DC3A70 /* FileMD5Hash_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5Hash_Prefix.pch; sourceTree = "<group>"; };
+		5DE28614126AD4EB0092F897 /* FileHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileHash.m; sourceTree = "<group>"; };
+		5DE28615126AD4EB0092F897 /* FileHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileHash.h; sourceTree = "<group>"; };
 		5DF3792F126AE85C00DC3A70 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5DF37930126AE85C00DC3A70 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5DF37A0A126AEB3300DC3A70 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -155,9 +154,8 @@
 		5DE28613126AD4EB0092F897 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				5DF378DA126AD84000DC3A70 /* FileMD5Hash_Prefix.pch */,
-				5DE28615126AD4EB0092F897 /* FileMD5Hash.h */,
-				5DE28614126AD4EB0092F897 /* FileMD5Hash.c */,
+				5DE28615126AD4EB0092F897 /* FileHash.h */,
+				5DE28614126AD4EB0092F897 /* FileHash.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -204,6 +202,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FileMD5Hash" */;
 			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
@@ -250,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DF37931126AE8A200DC3A70 /* AppDelegate.m in Sources */,
-				5DE28616126AD5230092F897 /* FileMD5Hash.c in Sources */,
+				5DE28616126AD5230092F897 /* FileHash.m in Sources */,
 				5DE285F3126ACE760092F897 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -260,7 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DC8CDC2126AF93100CE5F6B /* AppDelegate.m in Sources */,
-				5DC8CDF7126AFFB700CE5F6B /* FileMD5Hash.c in Sources */,
+				5DC8CDF7126AFFB700CE5F6B /* FileHash.m in Sources */,
 				5DC8CD9E126AF5F300CE5F6B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,8 +275,6 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
 				PRODUCT_NAME = FileMD5Hash;
 			};
@@ -287,8 +285,6 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
 				PRODUCT_NAME = FileMD5Hash;
 				VALIDATE_PRODUCT = YES;
@@ -305,8 +301,6 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (
@@ -330,8 +324,6 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = Common/FileMD5Hash_Prefix.pch;
 				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				OTHER_LDFLAGS = (

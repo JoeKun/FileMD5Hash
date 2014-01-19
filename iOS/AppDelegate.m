@@ -18,23 +18,11 @@
  *
  */
 
-//---------------------------------------------------------
-// Imports
-//---------------------------------------------------------
-
-// Header file
 #import "AppDelegate.h"
+#import "FileHash.h"
 
-// FileMD5Hash
-#include "FileMD5Hash.h"
-
-
-//---------------------------------------------------------
-// Interface declaration
-//---------------------------------------------------------
 
 @implementation AppDelegate
-
 
 #pragma mark -
 #pragma mark Deallocation
@@ -106,13 +94,8 @@
 
 - (IBAction)computeMD5HashOfBinary:(id)sender {
     NSString *executablePath = [[NSBundle mainBundle] executablePath];
-    CFStringRef executableFileMD5Hash = 
-        FileMD5HashCreateWithPath((CFStringRef)executablePath, 
-                                  FileHashDefaultChunkSizeForReadingData);
-    if (executableFileMD5Hash) {
-        [[self label] setText:((NSString *)executableFileMD5Hash)];
-        CFRelease(executableFileMD5Hash);
-    }
+    NSString *executableFileMD5Hash = [FileHash md5HashOfFileAtPath:executablePath];
+    [[self label] setText:executableFileMD5Hash];
 }
 
 

@@ -1,5 +1,5 @@
 /*
- *  AppDelegate.h
+ *  FileHash.h
  *  FileMD5Hash
  * 
  *  Copyright © 2010 Joel Lopes Da Silva. All rights reserved.
@@ -18,24 +18,10 @@
  *
  */
 
-#import <Cocoa/Cocoa.h>
+#import <Foundation/Foundation.h>
 
+@interface FileHash : NSObject
 
-@interface AppDelegate : NSObject <NSApplicationDelegate> {
-    NSWindow *window;
-    NSTextField *label;
-}
-
-#pragma mark -
-#pragma mark Properties
-
-@property (assign) IBOutlet NSWindow *window;
-@property (assign) IBOutlet NSTextField *label;
-
-
-#pragma mark -
-#pragma mark Actions
-
-- (IBAction)computeMD5HashOfBinary:(id)sender;
++ (NSString *)md5HashOfFileAtPath:(NSString *)filePath;
 
 @end
