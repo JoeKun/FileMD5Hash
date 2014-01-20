@@ -1,5 +1,5 @@
 /*
- *  FileHash.h
+ *  FileMD5HashApplicationDelegate.h
  *  FileMD5Hash
  * 
  *  Copyright © 2010-2014 Joel Lopes Da Silva. All rights reserved.
@@ -18,10 +18,10 @@
  *
  */
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface FileHash : NSObject
+@interface FileMD5HashApplicationDelegate : NSObject <UIApplicationDelegate>
 
-+ (NSString *)md5HashOfFileAtPath:(NSString *)filePath;
+@property (nonatomic, strong) UIWindow *window;
 
 @end
