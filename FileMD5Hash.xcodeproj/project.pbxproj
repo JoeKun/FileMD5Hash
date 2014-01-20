@@ -3,11 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
+		5D62043B188CB10400A1074D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D62043A188CB10400A1074D /* Default-568h@2x.png */; };
 		5D87FF68188C9B560052ABE3 /* FileMD5HashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87FF67188C9B560052ABE3 /* FileMD5HashViewController.m */; };
 		5D87FF6B188CA3D10052ABE3 /* FileMD5HashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D87FF6A188CA3D10052ABE3 /* FileMD5HashViewController.m */; };
 		5DC8CD9C126AF59300CE5F6B /* FileMD5Hash.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5DC8CD9B126AF59300CE5F6B /* FileMD5Hash.xib */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FileMD5Hash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5D62043A188CB10400A1074D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		5D87FF66188C9B560052ABE3 /* FileMD5HashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5HashViewController.h; sourceTree = "<group>"; };
 		5D87FF67188C9B560052ABE3 /* FileMD5HashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileMD5HashViewController.m; sourceTree = "<group>"; };
 		5D87FF69188CA3D10052ABE3 /* FileMD5HashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileMD5HashViewController.h; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				5D87FF67188C9B560052ABE3 /* FileMD5HashViewController.m */,
 				5DE285DB126ACE110092F897 /* FileMD5Hash.m */,
 				5DE285D1126ACE110092F897 /* FileMD5Hash-Info.plist */,
+				5D62043A188CB10400A1074D /* Default-568h@2x.png */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -192,9 +195,10 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0500;
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FileMD5Hash" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -218,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D62043B188CB10400A1074D /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -307,7 +312,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
@@ -330,7 +335,6 @@
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
@@ -369,6 +373,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,7 +382,6 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_CXX0X_EXTENSIONS = YES;
