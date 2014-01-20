@@ -21,7 +21,7 @@
 	<key>LSMinimumSystemVersion</key>
 	<string>${MACOSX_DEPLOYMENT_TARGET}</string>
 	<key>NSMainNibFile</key>
-	<string>MainMenu</string>
+	<string>FileMD5Hash</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
