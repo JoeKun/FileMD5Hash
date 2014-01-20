@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE285D0126ACE110092F897 /* iOS */,
-				5DC8CD83126AF49500CE5F6B /* Mac */,
+				5DC8CD83126AF49500CE5F6B /* OS X */,
 				5DE28613126AD4EB0092F897 /* Common */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
@@ -90,12 +90,12 @@
 			isa = PBXGroup;
 			children = (
 				5DC8CE0C126B01B600CE5F6B /* iOS */,
-				5DC8CEB2126B01C200CE5F6B /* Mac */,
+				5DC8CEB2126B01C200CE5F6B /* OS X */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5DC8CD83126AF49500CE5F6B /* Mac */ = {
+		5DC8CD83126AF49500CE5F6B /* OS X */ = {
 			isa = PBXGroup;
 			children = (
 				5DC8CDC0126AF93100CE5F6B /* FileMD5HashApplicationDelegate.h */,
@@ -106,7 +106,8 @@
 				5DC8CD9D126AF5F300CE5F6B /* FileMD5Hash.m */,
 				5DC8CD84126AF49500CE5F6B /* FileMD5Hash-Info.plist */,
 			);
-			path = Mac;
+			name = "OS X";
+			path = OSX;
 			sourceTree = "<group>";
 		};
 		5DC8CE0C126B01B600CE5F6B /* iOS */ = {
@@ -118,12 +119,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		5DC8CEB2126B01C200CE5F6B /* Mac */ = {
+		5DC8CEB2126B01C200CE5F6B /* OS X */ = {
 			isa = PBXGroup;
 			children = (
 				5DC8CEB3126B01FC00CE5F6B /* Cocoa.framework */,
 			);
-			name = Mac;
+			name = "OS X";
 			sourceTree = "<group>";
 		};
 		5DE285D0126ACE110092F897 /* iOS */ = {
@@ -168,9 +169,9 @@
 			productReference = 1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DC8CD7B126AF42700CE5F6B /* Mac */ = {
+		5DC8CD7B126AF42700CE5F6B /* OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Mac" */;
+			buildConfigurationList = 5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "OS X" */;
 			buildPhases = (
 				5DC8CD78126AF42700CE5F6B /* Resources */,
 				5DC8CD79126AF42700CE5F6B /* Sources */,
@@ -180,7 +181,7 @@
 			);
 			dependencies = (
 			);
-			name = Mac;
+			name = "OS X";
 			productName = FileMD5Hash;
 			productReference = 5DC8CD7C126AF42700CE5F6B /* FileMD5Hash.app */;
 			productType = "com.apple.product-type.application";
@@ -207,7 +208,7 @@
 			projectRoot = "";
 			targets = (
 				1D6058900D05DD3D006BFB54 /* iOS */,
-				5DC8CD7B126AF42700CE5F6B /* Mac */,
+				5DC8CD7B126AF42700CE5F6B /* OS X */,
 			);
 		};
 /* End PBXProject section */
@@ -287,7 +288,7 @@
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
+				INFOPLIST_FILE = "OSX/FileMD5Hash-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -310,7 +311,7 @@
 				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = "Mac/FileMD5Hash-Info.plist";
+				INFOPLIST_FILE = "OSX/FileMD5Hash-Info.plist";
 				INSTALL_PATH = "$(HOME)/Applications";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				OTHER_LDFLAGS = (
@@ -433,7 +434,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Mac" */ = {
+		5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DC8CD7F126AF42800CE5F6B /* Debug */,
