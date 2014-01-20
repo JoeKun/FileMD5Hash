@@ -1,0 +1,12 @@
+2.0.0
+  - New Objective-C API; the old API was just removed, hence the bump in major version number.
+  - ARC support.
+  - Additional SHA1 and SHA512 hashing routines.
+      * The logic for computing the hash wasn't replicated, it was simply made more modular internally.
+      * The implementation of a new method like that is just 3 lines of code, most of which to create the "hash computation context" containing all the special parts for the requested algorithm.
+  - Parameter chunkSizeForReadingData was removed; too much of a hassle to pass it.
+  - Removed goto usage.
+  - Miscellaneous cleanup.
+
+1.0.0
+  - Initial release.
