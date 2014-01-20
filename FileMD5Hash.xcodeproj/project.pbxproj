@@ -80,8 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				5DE28613126AD4EB0092F897 /* Library */,
-				5DE285D0126ACE110092F897 /* iOS */,
-				5DC8CD83126AF49500CE5F6B /* OS X */,
+				5D3336A5188CB1FF007C61B0 /* Sample Client */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -95,6 +94,16 @@
 				5DC8CEB2126B01C200CE5F6B /* OS X */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D3336A5188CB1FF007C61B0 /* Sample Client */ = {
+			isa = PBXGroup;
+			children = (
+				5DE285D0126ACE110092F897 /* iOS */,
+				5DC8CD83126AF49500CE5F6B /* OS X */,
+			);
+			name = "Sample Client";
+			path = SampleClient;
 			sourceTree = "<group>";
 		};
 		5DC8CD83126AF49500CE5F6B /* OS X */ = {
@@ -155,9 +164,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1D6058900D05DD3D006BFB54 /* iOS */ = {
+		1D6058900D05DD3D006BFB54 /* Sample Client - iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iOS" */;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Sample Client - iOS" */;
 			buildPhases = (
 				1D60588D0D05DD3D006BFB54 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
@@ -167,14 +176,14 @@
 			);
 			dependencies = (
 			);
-			name = iOS;
+			name = "Sample Client - iOS";
 			productName = FileMD5Hash;
 			productReference = 1D6058910D05DD3D006BFB54 /* FileMD5Hash.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5DC8CD7B126AF42700CE5F6B /* OS X */ = {
+		5DC8CD7B126AF42700CE5F6B /* Sample Client - OS X */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "OS X" */;
+			buildConfigurationList = 5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Sample Client - OS X" */;
 			buildPhases = (
 				5DC8CD78126AF42700CE5F6B /* Resources */,
 				5DC8CD79126AF42700CE5F6B /* Sources */,
@@ -184,7 +193,7 @@
 			);
 			dependencies = (
 			);
-			name = "OS X";
+			name = "Sample Client - OS X";
 			productName = FileMD5Hash;
 			productReference = 5DC8CD7C126AF42700CE5F6B /* FileMD5Hash.app */;
 			productType = "com.apple.product-type.application";
@@ -195,7 +204,9 @@
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = FileHash;
 				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Joel Lopes Da Silva";
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "FileMD5Hash" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -211,8 +222,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1D6058900D05DD3D006BFB54 /* iOS */,
-				5DC8CD7B126AF42700CE5F6B /* OS X */,
+				1D6058900D05DD3D006BFB54 /* Sample Client - iOS */,
+				5DC8CD7B126AF42700CE5F6B /* Sample Client - OS X */,
 			);
 		};
 /* End PBXProject section */
@@ -265,45 +276,24 @@
 		1D6058940D05DD3E006BFB54 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
-				PRODUCT_NAME = FileMD5Hash;
+				INFOPLIST_FILE = "SampleClient/iOS/FileMD5Hash-Info.plist";
 			};
 			name = Debug;
 		};
 		1D6058950D05DD3E006BFB54 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				INFOPLIST_FILE = "iOS/FileMD5Hash-Info.plist";
-				PRODUCT_NAME = FileMD5Hash;
-				VALIDATE_PRODUCT = YES;
+				INFOPLIST_FILE = "SampleClient/iOS/FileMD5Hash-Info.plist";
 			};
 			name = Release;
 		};
 		5DC8CD7F126AF42800CE5F6B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = NO;
-				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
-				GCC_MODEL_TUNING = G5;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				INFOPLIST_FILE = "OSX/FileMD5Hash-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
+				INFOPLIST_FILE = "SampleClient/OSX/FileMD5Hash-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = FileMD5Hash;
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -311,24 +301,11 @@
 		5DC8CD80126AF42800CE5F6B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
 				COMBINE_HIDPI_IMAGES = YES;
-				COPY_PHASE_STRIP = YES;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
-				GCC_MODEL_TUNING = G5;
-				INFOPLIST_FILE = "OSX/FileMD5Hash-Info.plist";
-				INSTALL_PATH = "$(HOME)/Applications";
+				INFOPLIST_FILE = "SampleClient/OSX/FileMD5Hash-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
-				OTHER_LDFLAGS = (
-					"-framework",
-					Foundation,
-					"-framework",
-					AppKit,
-				);
-				PREBINDING = NO;
-				PRODUCT_NAME = FileMD5Hash;
 				SDKROOT = macosx;
-				ZERO_LINK = NO;
 			};
 			name = Release;
 		};
@@ -350,6 +327,7 @@
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
 				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
@@ -374,6 +352,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -421,6 +400,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = "$(PROJECT_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -429,7 +409,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "iOS" */ = {
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "Sample Client - iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058940D05DD3E006BFB54 /* Debug */,
@@ -438,7 +418,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "OS X" */ = {
+		5DC8CD81126AF42800CE5F6B /* Build configuration list for PBXNativeTarget "Sample Client - OS X" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5DC8CD7F126AF42800CE5F6B /* Debug */,
