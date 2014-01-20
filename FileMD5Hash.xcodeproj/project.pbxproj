@@ -77,9 +77,9 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				5DE28613126AD4EB0092F897 /* Library */,
 				5DE285D0126ACE110092F897 /* iOS */,
 				5DC8CD83126AF49500CE5F6B /* OS X */,
-				5DE28613126AD4EB0092F897 /* Common */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
 			);
@@ -140,13 +140,13 @@
 			path = iOS;
 			sourceTree = "<group>";
 		};
-		5DE28613126AD4EB0092F897 /* Common */ = {
+		5DE28613126AD4EB0092F897 /* Library */ = {
 			isa = PBXGroup;
 			children = (
 				5DE28615126AD4EB0092F897 /* FileHash.h */,
 				5DE28614126AD4EB0092F897 /* FileHash.m */,
 			);
-			path = Common;
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
