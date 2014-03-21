@@ -1,5 +1,5 @@
 /*
- *  FileHash.c
+ *  FileHash.m
  *  FileMD5Hash
  * 
  *  Copyright © 2010-2014 Joel Lopes Da Silva. All rights reserved.
