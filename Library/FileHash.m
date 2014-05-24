@@ -103,10 +103,11 @@ typedef struct _FileHashComputationContext {
 }
 
 + (NSString *)hashOfFileAtPath:(NSString *)filePath withComputationContext:(FileHashComputationContext *)context {
-    const int *digest = [[self rawHashOfFileAtPath:filePath withComputationContext:context] bytes];
-    NSMutableString *result = [NSMutableString stringWithCapacity:sizeof(digest)*2];
-    for (NSUInteger i = 0; i<sizeof(digest); i++) {
-        [result appendFormat:@"%02x", digest[i]];
+    NSData *digestData = [self rawHashOfFileAtPath:filePath withComputationContext:context];
+    const unsigned char *digest = [digestData bytes];
+    NSMutableString *result = [NSMutableString stringWithCapacity:digestData.length*2];
+    for (NSUInteger i = 0; i<digestData.length; i++) {
+        [result appendFormat:@"%02x", (int)digest[i]];
     }
 
     return [result copy];
