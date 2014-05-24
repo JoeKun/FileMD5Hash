@@ -26,4 +26,8 @@
 + (NSString *)sha1HashOfFileAtPath:(NSString *)filePath;
 + (NSString *)sha512HashOfFileAtPath:(NSString *)filePath;
 
++ (NSData *)rawMd5HashOfFileAtPath:(NSString *)filePath;
++ (NSData *)rawSha1HashOfFileAtPath:(NSString *)filePath;
++ (NSData *)rawSha512HashOfFileAtPath:(NSString *)filePath;
+
 @end

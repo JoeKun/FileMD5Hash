@@ -56,19 +56,19 @@ typedef struct _FileHashComputationContext {
 
 @implementation FileHash
 
-+ (NSString *)hashOfFileAtPath:(NSString *)filePath withComputationContext:(FileHashComputationContext *)context {
-    NSString *result = nil;
++ (NSData *)rawHashOfFileAtPath:(NSString *)filePath withComputationContext:(FileHashComputationContext *)context {
+    NSData *result = nil;
     CFURLRef fileURL = CFURLCreateWithFileSystemPath(kCFAllocatorDefault, (CFStringRef)filePath, kCFURLPOSIXPathStyle, (Boolean)false);
     CFReadStreamRef readStream = fileURL ? CFReadStreamCreateWithFile(kCFAllocatorDefault, fileURL) : NULL;
     BOOL didSucceed = readStream ? (BOOL)CFReadStreamOpen(readStream) : NO;
     if (didSucceed) {
-        
+
         // Use default value for the chunk size for reading data.
         const size_t chunkSizeForReadingData = FileHashDefaultChunkSizeForReadingData;
-        
+
         // Initialize the hash object
         (*context->initFunction)(context->hashObjectPointer);
-        
+
         // Feed the data to the hash object.
         BOOL hasMoreData = YES;
         while (hasMoreData) {
@@ -82,28 +82,34 @@ typedef struct _FileHashComputationContext {
                 (*context->updateFunction)(context->hashObjectPointer, (const void *)buffer, (CC_LONG)readBytesCount);
             }
         }
-        
+
         // Compute the hash digest
         unsigned char digest[context->digestLength];
         (*context->finalFunction)(digest, context->hashObjectPointer);
-        
+
         // Close the read stream.
         CFReadStreamClose(readStream);
-        
+
         // Proceed if the read operation succeeded.
         didSucceed = !hasMoreData;
         if (didSucceed) {
-            char hash[2 * sizeof(digest) + 1];
-            for (size_t i = 0; i < sizeof(digest); ++i) {
-                snprintf(hash + (2 * i), 3, "%02x", (int)(digest[i]));
-            }
-            result = [NSString stringWithUTF8String:hash];
+            result = [[NSData alloc] initWithBytes:digest length:sizeof(digest)];
         }
-        
+
     }
     if (readStream) CFRelease(readStream);
     if (fileURL)    CFRelease(fileURL);
     return result;
+}
+
++ (NSString *)hashOfFileAtPath:(NSString *)filePath withComputationContext:(FileHashComputationContext *)context {
+    const int *digest = [[self rawHashOfFileAtPath:filePath withComputationContext:context] bytes];
+    NSMutableString *result = [NSMutableString stringWithCapacity:sizeof(digest)*2];
+    for (NSUInteger i = 0; i<sizeof(digest); i++) {
+        [result appendFormat:@"%02x", digest[i]];
+    }
+
+    return [result copy];
 }
 
 + (NSString *)md5HashOfFileAtPath:(NSString *)filePath {
@@ -122,6 +128,24 @@ typedef struct _FileHashComputationContext {
     FileHashComputationContext context;
     FileHashComputationContextInitialize(context, SHA512);
     return [self hashOfFileAtPath:filePath withComputationContext:&context];
+}
+
++ (NSData *)rawMd5HashOfFileAtPath:(NSString *)filePath {
+    FileHashComputationContext context;
+    FileHashComputationContextInitialize(context, MD5);
+    return [self rawHashOfFileAtPath:filePath withComputationContext:&context];
+}
+
++ (NSData *)rawSha1HashOfFileAtPath:(NSString *)filePath {
+    FileHashComputationContext context;
+    FileHashComputationContextInitialize(context, SHA1);
+    return [self rawHashOfFileAtPath:filePath withComputationContext:&context];
+}
+
++ (NSData *)rawSha512HashOfFileAtPath:(NSString *)filePath {
+    FileHashComputationContext context;
+    FileHashComputationContextInitialize(context, SHA512);
+    return [self rawHashOfFileAtPath:filePath withComputationContext:&context];
 }
 
 @end
