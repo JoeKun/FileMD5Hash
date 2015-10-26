@@ -22,8 +22,31 @@
 
 @interface FileHash : NSObject
 
+/**
+ *  Returns the @c MD5 hash of the file at the specified path.
+ *
+ *  @param filePath The path of the file.
+ *
+ *  @return The @c MD5 hash of the file.
+ */
 + (NSString *)md5HashOfFileAtPath:(NSString *)filePath;
+
+/**
+ *  Returns the @c SHA1 hash of the file at the specified path.
+ *
+ *  @param filePath The path of the file.
+ *
+ *  @return The @c SHA1 hash of the file.
+ */
 + (NSString *)sha1HashOfFileAtPath:(NSString *)filePath;
+
+/**
+ *  Returns the @c SHA512 hash of the file at the specified path.
+ *
+ *  @param filePath The path of the file.
+ *
+ *  @return The @c SHA512 hash of the file.
+ */
 + (NSString *)sha512HashOfFileAtPath:(NSString *)filePath;
 
 @end
