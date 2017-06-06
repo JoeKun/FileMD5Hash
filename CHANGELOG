@@ -1,3 +1,5 @@
+2.0.1
+  - Added support for Carthage.
 2.0.0
   - New Objective-C API; the old API was just removed, hence the bump in major version number.
   - ARC support.
